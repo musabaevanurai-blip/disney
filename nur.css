@@ -1,0 +1,138 @@
+/* 1. Жалпы жөндөөлөр */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 2. Негизги контейнер */
+.main-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.cards-wrapper {
+    display: flex;
+    gap: 25px;
+}
+
+/* 3. Картанын дизайны */
+.card {
+    width: 280px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Көк үстүнкү бөлүк */
+.card-header {
+    background-color: #db43f2;
+    height: 140px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* Профиль сүрөтү */
+.profile-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    overflow: hidden;
+    position: absolute;
+    bottom: -45px;
+    background: #eee;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Текст бөлүгү */
+.card-body {
+    padding: 55px 20px 25px;
+}
+
+.card-body h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Баскыч */
+.view-more {
+    background-color: #d843f2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.view-more:hover {
+    background-color: #b541bd;
+}
+
+/* 4. Башкаруу элементтери (Жебелер жана чекиттер) */
+.arrow {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #4376f2;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.pagination {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.active {
+    background-color: #4376f2;
+    width: 20px; /* Активдүү чекитти узунураак кылуу */
+    border-radius: 10px;
+}
